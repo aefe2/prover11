@@ -17,10 +17,16 @@ input:hover {
     cursor: pointer;
 }
 .first-task {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 20px;
     display: inline-block;
     margin: 50px 0 0 50px;
 }
 #text {
     font-family: "Calibri";
     text-align: center;
+}
+.task2 {
+    margin: 25px 0 0 50px;
 }
