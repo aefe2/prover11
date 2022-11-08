@@ -30,3 +30,20 @@ input:hover {
 .task2 {
     margin: 25px 0 0 50px;
 }
+.task3 {
+    width: 400px;
+    height: 400px;
+}
+.field {
+    border: 5px solid black;
+    background-color: rgba(94, 199, 94, 0.92);
+    height: 400px;
+}
+.ball {
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    border: 1px black solid;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #000000, white);
+}
