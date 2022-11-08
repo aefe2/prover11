@@ -1,0 +1,26 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+body {
+    background-color: gray;
+}
+input {
+    font-family: "Calibri";
+    padding: 7px;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+input:hover {
+    background-color: rgba(255, 255, 255, 0.74);
+    cursor: pointer;
+}
+.first-task {
+    display: inline-block;
+    margin: 50px 0 0 50px;
+}
+#text {
+    font-family: "Calibri";
+    text-align: center;
+}
