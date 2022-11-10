@@ -1,49 +1,73 @@
 * {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
+    font-size: 20px;
 }
+
 body {
     background-color: gray;
 }
-input {
-    font-family: "Calibri";
-    padding: 7px;
-    border-radius: 20px;
-    border: 1px solid black;
-    margin-bottom: 10px;
+
+.container {
+    height: 500px;
 }
-input:hover {
-    background-color: rgba(255, 255, 255, 0.74);
-    cursor: pointer;
-}
-.first-task {
-    border: 1px solid black;
-    padding: 5px;
-    border-radius: 20px;
-    display: inline-block;
-    margin: 50px 0 0 50px;
-}
-#text {
-    font-family: "Calibri";
-    text-align: center;
-}
-.task2 {
-    margin: 25px 0 0 50px;
-}
-.task3 {
-    width: 400px;
-    height: 400px;
-}
-.field {
-    border: 5px solid black;
-    background-color: rgba(94, 199, 94, 0.92);
-    height: 400px;
-}
-.ball {
-    margin: 0;
-    width: 60px;
-    height: 60px;
-    border: 1px black solid;
+
+.elem {
+    border: 2px solid rgba(0, 255, 127, 0.72);
     border-radius: 50px;
-    background-image: linear-gradient(to right, #000000, white);
+    padding: 5px;
+    width: fit-content;
 }
+
+.anchor {
+    border: 2px solid rgba(0, 255, 127, 0.72);
+    border-radius: 50px;
+    padding: 5px;
+    width: fit-content;
+    text-align: center;
+    margin: 250px auto;
+}
+/*11 снизу*/
+/*input {*/
+/*    font-family: "Calibri";*/
+/*    padding: 7px;*/
+/*    border-radius: 20px;*/
+/*    border: 1px solid black;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+/*input:hover {*/
+/*    background-color: rgba(255, 255, 255, 0.74);*/
+/*    cursor: pointer;*/
+/*}*/
+/*.first-task {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px;*/
+/*    border-radius: 20px;*/
+/*    display: inline-block;*/
+/*    margin: 50px 0 0 50px;*/
+/*}*/
+/*#text {*/
+/*    font-family: "Calibri";*/
+/*    text-align: center;*/
+/*}*/
+/*.task2 {*/
+/*    margin: 25px 0 0 50px;*/
+/*}*/
+/*.task3 {*/
+/*    width: 400px;*/
+/*    height: 400px;*/
+/*}*/
+/*.field {*/
+/*    border: 5px solid black;*/
+/*    background-color: rgba(94, 199, 94, 0.92);*/
+/*    height: 400px;*/
+/*}*/
+/*.ball {*/
+/*    margin: 0;*/
+/*    width: 60px;*/
+/*    height: 60px;*/
+/*    border: 1px black solid;*/
+/*    border-radius: 50px;*/
+/*    background-image: linear-gradient(to right, #000000, white);*/
+/*}*/
+
