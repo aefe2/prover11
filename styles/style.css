@@ -6,72 +6,81 @@
 
 body {
     background-color: gray;
-}
-
-.container {
     width: 100vw;
     height: 100vh;
 }
+/*эта 10ая*/
+/*.container {*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*}*/
 
-.elem {
-
-    transition-duration: .1s;
-    border: 2px solid rgba(0, 255, 127, 0.72);
-    border-radius: 50px;
-    padding: 5px;
-    width: fit-content;
-    position: absolute;
-}
-
-.anchor {
-    border: 2px solid rgba(0, 255, 127, 0.72);
-    border-radius: 50px;
-    padding: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
-/*11 снизу*/
-/*input {*/
-/*    font-family: "Calibri";*/
-/*    padding: 7px;*/
-/*    border-radius: 20px;*/
-/*    border: 1px solid black;*/
-/*    margin-bottom: 10px;*/
-/*}*/
-/*input:hover {*/
-/*    background-color: rgba(255, 255, 255, 0.74);*/
-/*    cursor: pointer;*/
-/*}*/
-/*.first-task {*/
-/*    border: 1px solid black;*/
-/*    padding: 5px;*/
-/*    border-radius: 20px;*/
-/*    display: inline-block;*/
-/*    margin: 50px 0 0 50px;*/
-/*}*/
-/*#text {*/
-/*    font-family: "Calibri";*/
-/*    text-align: center;*/
-/*}*/
-/*.task2 {*/
-/*    margin: 25px 0 0 50px;*/
-/*}*/
-/*.task3 {*/
-/*    width: 400px;*/
-/*    height: 400px;*/
-/*}*/
-/*.field {*/
-/*    border: 5px solid black;*/
-/*    background-color: rgba(94, 199, 94, 0.92);*/
-/*    height: 400px;*/
-/*}*/
-/*.ball {*/
-/*    margin: 0;*/
-/*    width: 60px;*/
-/*    height: 60px;*/
-/*    border: 1px black solid;*/
+/*.elem {*/
+/*    transition-duration: .1s;*/
+/*    border: 2px solid rgba(0, 255, 127, 0.72);*/
 /*    border-radius: 50px;*/
-/*    background-image: linear-gradient(to right, #000000, white);*/
+/*    padding: 5px;*/
+/*    width: fit-content;*/
+/*    position: absolute;*/
 /*}*/
+
+/*.anchor {*/
+/*    border: 2px solid rgba(0, 255, 127, 0.72);*/
+/*    border-radius: 50px;*/
+/*    padding: 5px;*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*}*/
+
+/*11 снизу*/
+input {
+    font-family: "Calibri";
+    padding: 7px;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+input:hover {
+    background-color: rgba(255, 255, 255, 0.74);
+    cursor: pointer;
+}
+.first-task {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 50px 0 0 50px;
+}
+#text {
+    font-family: "Calibri";
+    text-align: center;
+}
+.task2 {
+    margin: 25px 0 0 50px;
+}
+.task3 {
+    width: 400px;
+    height: 400px;
+}
+.field {
+    border: 10px solid black;
+    background-color: rgba(94, 199, 94, 0.92);
+    height: 400px;
+    width: 400px;
+    margin: 0 0 0 500px;
+}
+
+.ball {
+
+    transition-duration: .3s;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
 
