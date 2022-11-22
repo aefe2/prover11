@@ -1,4 +1,4 @@
-//
+//11
 document.querySelector('.button1').onclick = function () {
     document.querySelector('#text').hidden = 'true';
 };
