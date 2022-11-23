@@ -160,8 +160,21 @@
 //12
 
 let firstDiv = document.createElement('div');
+firstDiv.style.position = 'absolute';
 firstDiv.style.width = '400px';
+firstDiv.style.height = '20px';
 firstDiv.style.marginLeft = '40px';
 firstDiv.style.marginTop = '40px';
-firstDiv.innerHTML = '<p>aaa</p>';
+firstDiv.style.backgroundColor = 'grey';
+firstDiv.style.borderRadius = '50px';
 document.body.append(firstDiv);
+
+let secondDiv = document.createElement('div');
+secondDiv.style.position = 'absolute';
+secondDiv.style.width = '40px';
+secondDiv.style.height = '40px';
+secondDiv.style.marginLeft = '40px';
+secondDiv.style.marginTop = '40px';
+secondDiv.style.backgroundColor = 'darkslateblue';
+secondDiv.style.borderRadius = '50px';
+document.body.append(secondDiv);
