@@ -157,3 +157,11 @@
 //
 // container.addEventListener('mousemove', positionAt);
 
+//12
+
+let firstDiv = document.createElement('div');
+firstDiv.style.width = '400px';
+firstDiv.style.marginLeft = '40px';
+firstDiv.style.marginTop = '40px';
+firstDiv.innerHTML = '<p>aaa</p>';
+document.body.append(firstDiv);
