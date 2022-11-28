@@ -158,23 +158,57 @@
 // container.addEventListener('mousemove', positionAt);
 
 //12
+let slideArea = document.createElement('div');
+slideArea.style.position = 'absolute';
+slideArea.style.width = '400px';
+slideArea.style.height = '20px';
+slideArea.style.top = '20%'
+slideArea.style.left = '20%'
+slideArea.style.backgroundColor = 'lightslategray';
+slideArea.style.borderRadius = '50px';
+document.body.append(slideArea);
 
-let firstDiv = document.createElement('div');
-firstDiv.style.position = 'absolute';
-firstDiv.style.width = '400px';
-firstDiv.style.height = '20px';
-firstDiv.style.marginLeft = '40px';
-firstDiv.style.marginTop = '40px';
-firstDiv.style.backgroundColor = 'grey';
-firstDiv.style.borderRadius = '50px';
-document.body.append(firstDiv);
+let ball = document.createElement('div');
+ball.style.position = 'absolute';
+ball.style.width = '40px';
+ball.style.height = '40px';
+ball.style.top = '19%';
+ball.style.left = '20.3%';
+ball.style.backgroundColor = 'darkslateblue';
+ball.style.borderRadius = '50px';
+document.body.append(ball);
 
-let secondDiv = document.createElement('div');
-secondDiv.style.position = 'absolute';
-secondDiv.style.width = '40px';
-secondDiv.style.height = '40px';
-secondDiv.style.marginLeft = '40px';
-secondDiv.style.marginTop = '40px';
-secondDiv.style.backgroundColor = 'darkslateblue';
-secondDiv.style.borderRadius = '50px';
-document.body.append(secondDiv);
+ball.onmousedown = function (event) {
+    event.preventDefault();
+
+    let shiftX = event.clientX - ball.getBoundingClientRect().left;
+
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+
+    function onMouseMove(event) {
+        let newLeft = event.clientX - shiftX - slideArea.getBoundingClientRect().left;
+
+        // курсор вышел из слайдера => оставить бегунок в его границах.
+        if (newLeft < 0) {
+            newLeft = 0;
+        }
+        let rightEdge = slideArea.offsetWidth + slideArea.offsetLeft - ball.offsetWidth - 5;
+        if (newLeft > rightEdge) {
+            newLeft = rightEdge;
+        }
+
+        ball.style.left = newLeft + 'px';
+    }
+
+    function onMouseUp() {
+        document.removeEventListener('mouseup', onMouseUp);
+        document.removeEventListener('mousemove', onMouseMove);
+    }
+
+};
+
+ball.ondragstart = function () {
+    return false;
+};
+
