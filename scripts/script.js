@@ -30,7 +30,10 @@ function menu() {
         case answer === res[4]:
             sortArr();
             break;
-        case res.includes(answer) :
+        case Math.sign(answer) === -1:
+            alert('Вы ввели отрицательное число')
+            break;
+        case !res.includes(answer):
             alert('Введено неверное число')
             break;
         case typeof answer !== Number:
