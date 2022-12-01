@@ -4,6 +4,7 @@
 }
 
 body {
+    background-color: darkgray;
     width: 100vw;
     height: 100vh;
 }
@@ -12,28 +13,28 @@ div {
 
 }
 /*эта 10ая*/
-/*.container {*/
-/*    width: 100vw;*/
-/*    height: 100vh;*/
-/*}*/
+.container {
+    width: 100vw;
+    height: 100vh;
+}
 
-/*.elem {*/
-/*    transition-duration: .1s;*/
-/*    border: 2px solid rgba(0, 255, 127, 0.72);*/
-/*    border-radius: 50px;*/
-/*    padding: 5px;*/
-/*    width: fit-content;*/
-/*    position: absolute;*/
-/*}*/
+.elem {
+    transition-duration: .1s;
+    border: 2px solid rgba(0, 255, 127, 0.72);
+    border-radius: 50px;
+    padding: 5px;
+    width: fit-content;
+    position: absolute;
+}
 
-/*.anchor {*/
-/*    border: 2px solid rgba(0, 255, 127, 0.72);*/
-/*    border-radius: 50px;*/
-/*    padding: 5px;*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*}*/
+.anchor {
+    border: 2px solid rgba(0, 255, 127, 0.72);
+    border-radius: 50px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
 
 /*11*/
 /*input {*/
