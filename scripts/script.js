@@ -6,7 +6,7 @@ menu();
 
 function menu() {
 
-    let answer = +prompt("0 - закончить\n" +
+    let answer = prompt("0 - закончить\n" +
         "1 - вывод массива\n" +
         "2 - добавить объект\n" +
         "3 - поиск объектов\n" +
@@ -14,29 +14,26 @@ function menu() {
 
     switch (true) {
         case answer == '':
-            alert('Пустое поле')
+            alert('Пустое поле или отмена действия')
             break;
-        case answer === res[0]:
+        case answer == res[0]:
             break;
-        case answer === res[1]:
+        case answer == res[1]:
             printArr();
             break;
-        case answer === res[2]:
+        case answer == res[2]:
             let book = new MakeBook();
             break;
-        case answer === res[3]:
+        case answer == res[3]:
             searchObj();
             break;
-        case answer === res[4]:
+        case answer == res[4]:
             sortArr();
             break;
-        case Math.sign(answer) === -1:
-            alert('Вы ввели отрицательное число')
-            break;
-        case !res.includes(answer):
+        case !res.includes(answer) || Math.sign(answer) == -1:
             alert('Введено неверное число')
             break;
-        case typeof answer !== Number:
+        case typeof answer != Number:
             alert('Вы ввели не число')
             break;
         default:
