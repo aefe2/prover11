@@ -1,43 +1,45 @@
 //2 самостоялка
 let arr = [];
-let res = [0, 1, 2, 3, 4]
+let res = [1, 2, 3, 4, 5]
 
 menu();
 
 function menu() {
 
-    let answer = prompt("0 - закончить\n" +
-        "1 - вывод массива\n" +
-        "2 - добавить объект\n" +
-        "3 - поиск объектов\n" +
-        "4 - сортировка массива");
+    let answer = +prompt("1 - закончить\n" +
+        "2 - вывод массива\n" +
+        "3 - добавить объект\n" +
+        "4 - поиск объектов\n" +
+        "5 - сортировка массива");
 
     switch (true) {
-        case answer == '':
-            alert('Пустое поле или отмена действия')
+        case answer == 0:
             break;
-        case answer == res[0]:
+        case String(answer) === '0':
+            alert('Пустое поле')
             break;
-        case answer == res[1]:
+        case Number(answer) === res[0]:
+            break;
+        case Number(answer) === res[1]:
             printArr();
             break;
-        case answer == res[2]:
+        case Number(answer) === res[2]:
             let book = new MakeBook();
             break;
-        case answer == res[3]:
+        case Number(answer) === res[3]:
             searchObj();
             break;
-        case answer == res[4]:
+        case Number(answer) === res[4]:
             sortArr();
             break;
-        case !res.includes(answer) || Math.sign(answer) == -1:
-            alert('Введено неверное число')
-            break;
-        case typeof answer != Number:
-            alert('Вы ввели не число')
+        case !res.includes(answer):
+            if (isNaN(answer)) alert('Вы ввели не число')
+            else alert('Введено неверное число');
+            menu()
             break;
         default:
             alert('Ошибка')
+            menu()
             break;
     }
 }
@@ -52,6 +54,7 @@ function MakeBook() {
     this.publishing = prompt('Publishing name');
     this.price = cost();
     arr.push(this);
+    menu()
 }
 
 function cost() {
@@ -68,6 +71,7 @@ function date() {
 
 function printArr() {
     console.table(arr)
+    menu()
 }
 
 function searchObj() {
@@ -76,6 +80,7 @@ function searchObj() {
     for (let item of arr) {
         if (item[search] == value) console.log(item);
     }
+    menu()
 }
 
 function sortArr() {
@@ -95,6 +100,7 @@ function sortArr() {
     }
 
     console.table(arr)
+    menu()
 }
 
 //11
