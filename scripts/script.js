@@ -1,107 +1,107 @@
 //2 самостоялка
-let arr = [];
-let res = [1, 2, 3, 4, 5]
-
-menu();
-
-function menu() {
-
-    let answer = +prompt("1 - закончить\n" +
-        "2 - вывод массива\n" +
-        "3 - добавить объект\n" +
-        "4 - поиск объектов\n" +
-        "5 - сортировка массива");
-
-    switch (true) {
-        case answer == 0:
-            break;
-        case String(answer) === '0':
-            alert('Пустое поле')
-            break;
-        case Number(answer) === res[0]:
-            break;
-        case Number(answer) === res[1]:
-            printArr();
-            break;
-        case Number(answer) === res[2]:
-            let book = new MakeBook();
-            break;
-        case Number(answer) === res[3]:
-            searchObj();
-            break;
-        case Number(answer) === res[4]:
-            sortArr();
-            break;
-        case !res.includes(answer):
-            if (isNaN(answer)) alert('Вы ввели не число')
-            else alert('Введено неверное число');
-            menu()
-            break;
-        default:
-            alert('Ошибка')
-            menu()
-            break;
-    }
-}
-
-function MakeBook() {
-    this.bookName = prompt('Book name');
-    this.author = {
-        lastName: prompt("Author's last name"),
-        firstName: prompt("Author's first name"),
-    };
-    this.releaseDate = date();
-    this.publishing = prompt('Publishing name');
-    this.price = cost();
-    arr.push(this);
-    menu()
-}
-
-function cost() {
-    let price = +prompt('Book price', '999');
-    if (isNaN(price) || !price) return 0;
-    else return price;
-}
-
-function date() {
-    let a = +prompt('Release date', '1902');
-    if (isNaN(a) || a > 2022 || !a) return 0;
-    else return a;
-}
-
-function printArr() {
-    console.table(arr)
-    menu()
-}
-
-function searchObj() {
-    let search = prompt('Введите св-во поиска');
-    let value = prompt('Введите значение св-ва');
-    for (let item of arr) {
-        if (item[search] == value) console.log(item);
-    }
-    menu()
-}
-
-function sortArr() {
-    let property = prompt('Введите св-во сортировки, bookName, price');
-    if (property === 'bookName') {
-        arr.sort(function (a, b) {
-            if (a.bookName.toLowerCase() > b.bookName.toLowerCase()) return 1;
-            if (a.bookName.toLowerCase() < b.bookName.toLowerCase()) return -1;
-            else return 0;
-        });
-    } else if (property === 'price') {
-        arr.sort(function (a, b) {
-            if (a.price > b.price) return 1;
-            if (a.price < b.price) return -1;
-            else return 0;
-        });
-    }
-
-    console.table(arr)
-    menu()
-}
+// let arr = [];
+// let res = [1, 2, 3, 4, 5]
+//
+// menu();
+//
+// function menu() {
+//
+//     let answer = +prompt("1 - закончить\n" +
+//         "2 - вывод массива\n" +
+//         "3 - добавить объект\n" +
+//         "4 - поиск объектов\n" +
+//         "5 - сортировка массива");
+//
+//     switch (true) {
+//         case answer == 0:
+//             break;
+//         case String(answer) === '0':
+//             alert('Пустое поле')
+//             break;
+//         case Number(answer) === res[0]:
+//             break;
+//         case Number(answer) === res[1]:
+//             printArr();
+//             break;
+//         case Number(answer) === res[2]:
+//             let book = new MakeBook();
+//             break;
+//         case Number(answer) === res[3]:
+//             searchObj();
+//             break;
+//         case Number(answer) === res[4]:
+//             sortArr();
+//             break;
+//         case !res.includes(answer):
+//             if (isNaN(answer)) alert('Вы ввели не число')
+//             else alert('Введено неверное число');
+//             menu()
+//             break;
+//         default:
+//             alert('Ошибка')
+//             menu()
+//             break;
+//     }
+// }
+//
+// function MakeBook() {
+//     this.bookName = prompt('Book name');
+//     this.author = {
+//         lastName: prompt("Author's last name"),
+//         firstName: prompt("Author's first name"),
+//     };
+//     this.releaseDate = date();
+//     this.publishing = prompt('Publishing name');
+//     this.price = cost();
+//     arr.push(this);
+//     menu()
+// }
+//
+// function cost() {
+//     let price = +prompt('Book price', '999');
+//     if (isNaN(price) || !price) return 0;
+//     else return price;
+// }
+//
+// function date() {
+//     let a = +prompt('Release date', '1902');
+//     if (isNaN(a) || a > 2022 || !a) return 0;
+//     else return a;
+// }
+//
+// function printArr() {
+//     console.table(arr)
+//     menu()
+// }
+//
+// function searchObj() {
+//     let search = prompt('Введите св-во поиска');
+//     let value = prompt('Введите значение св-ва');
+//     for (let item of arr) {
+//         if (item[search] == value) console.log(item);
+//     }
+//     menu()
+// }
+//
+// function sortArr() {
+//     let property = prompt('Введите св-во сортировки, bookName, price');
+//     if (property === 'bookName') {
+//         arr.sort(function (a, b) {
+//             if (a.bookName.toLowerCase() > b.bookName.toLowerCase()) return 1;
+//             if (a.bookName.toLowerCase() < b.bookName.toLowerCase()) return -1;
+//             else return 0;
+//         });
+//     } else if (property === 'price') {
+//         arr.sort(function (a, b) {
+//             if (a.price > b.price) return 1;
+//             if (a.price < b.price) return -1;
+//             else return 0;
+//         });
+//     }
+//
+//     console.table(arr)
+//     menu()
+// }
 
 //11
 // document.querySelector('.button1').onclick = function () {
@@ -174,7 +174,7 @@ function sortArr() {
 //
 // container.addEventListener('mousemove', positionAt);
 
-//12
+//13
 // let slideArea = document.createElement('div');
 // slideArea.style.position = 'absolute';
 // slideArea.style.width = '400px';
@@ -229,3 +229,37 @@ function sortArr() {
 //     return false;
 // };
 
+//12
+let ul = document.querySelector('ul');
+let list = document.querySelectorAll('li');
+for (let liElem of list) {
+    liElem.style.cursor = 'pointer';
+}
+
+ul.onclick = function (event) {
+    if (event.target.tagName != "LI") return;
+
+    if (event.ctrlKey || event.metaKey) {
+        toggleSelect(event.target);
+    } else {
+        singleSelect(event.target);
+    }
+
+}
+
+// предотвращает ненужное выделение элементов списка при клике
+ul.onmousedown = function () {
+    return false;
+};
+
+function toggleSelect(li) {
+    li.classList.toggle('selected');
+}
+
+function singleSelect(li) {
+    let selected = ul.querySelectorAll('.selected');
+    for (let elem of selected) {
+        elem.classList.remove('selected');
+    }
+    li.classList.add('selected');
+}
